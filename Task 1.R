@@ -10,7 +10,8 @@ install.packages("fpc");
 install.packages("pvclust");
 install.packages("cluster");
 install.packages("mclust");
-install.packages("ROCR")
+install.packages("ROCR");
+install.packages("useful");
 
 
 library("topicmodels")
