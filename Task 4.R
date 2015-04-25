@@ -53,10 +53,3 @@ table(topics,kc$cluster);
 # eucQcd = dist(data,method="euclidean");
 # mds=cmdscale(eucQcd,k=2,eig=T)
 # plot(mds, col=kc$cluster, main="10 Clusters");
-
-
-# DBSCAN
-dbscan = dbscan(data, eps = 0.1);
-table(topics,dbscan$cluster);
-# plot(dbscan,data);
-# plotcluster(data, dbscan$cluster);
