@@ -50,6 +50,7 @@ for(i in 1:10){
 # KMeans
 kc = kmeans(data, centers=10);
 table(topics,kc$cluster);
+plot(kc$cluster);
 # eucQcd = dist(data,method="euclidean");
 # mds=cmdscale(eucQcd,k=2,eig=T)
 # plot(mds, col=kc$cluster, main="10 Clusters");
