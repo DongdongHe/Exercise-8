@@ -3,6 +3,8 @@ library("fpc");
 library("pvclust");
 library("cluster");
 library("mclust");
+library("ggplot2");
+library("useful");
 
 data = read.csv(file="10topics.csv", header = T);
 data2 = data;
@@ -50,7 +52,8 @@ for(i in 1:10){
 # KMeans
 kc = kmeans(data, centers=10);
 table(topics,kc$cluster);
-plot(kc$cluster);
+plot(kc);
+plot(kc, data=data2);
 # eucQcd = dist(data,method="euclidean");
 # mds=cmdscale(eucQcd,k=2,eig=T)
 # plot(mds, col=kc$cluster, main="10 Clusters");
